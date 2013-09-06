@@ -1,0 +1,13 @@
+<module rename-to='PhoneBook'>
+  <inherits name='com.google.gwt.user.User' />
+  <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+  <inherits name='com.sencha.gxt.ui.GXT' />
+
+  <entry-point class='org.experimentalerp.phonebook.GwtView.PhoneBook'/>
+
+  <source path='model' />
+  <source path='GwtService' />
+  <source path='GwtView' />
+  <source path='GwtModel' />
+  <source path='GwtEventBus' />
+</module>

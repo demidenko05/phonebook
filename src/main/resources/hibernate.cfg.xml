@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="sfPhoneBook">
+		<property name="connection.datasource">java:/comp/env/jdbc/dsPhoneBook</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.current_session_context_class">org.hibernate.context.ManagedSessionContext</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="javax.persistence.validation.mode">none</property>
+        <mapping resource="User.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

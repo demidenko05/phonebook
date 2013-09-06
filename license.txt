@@ -1,0 +1,6 @@
+
+	 2013 Yury Demidenko
+
+ * based on Sengha examples (http://www.sencha.com/examples/#ExamplePlace:gridbinding).
+ * GNU GPL license v3 (http://www.gnu.org/copyleft/gpl.html)
+

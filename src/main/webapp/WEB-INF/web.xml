@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<welcome-file-list>
+	  <welcome-file>PhoneBook.html</welcome-file>
+	</welcome-file-list>
+  
+	<filter>
+	  <display-name>HibernateSessionRequestFilter</display-name>
+	  <filter-name>HibernateSessionRequestFilter</filter-name>
+	  <filter-class>org.experimentalerp.phonebook.servlet.HibernateSessionRequestFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	  <filter-name>HibernateSessionRequestFilter</filter-name>
+	  <url-pattern>/PhoneBook/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+	  <servlet-name>UserActionServlet</servlet-name>
+	  <servlet-class>org.experimentalerp.phonebook.servlet.PhoneBookW</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	  <servlet-name>UserActionServlet</servlet-name>
+	  <url-pattern>/PhoneBook/service</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+	  <description>postgreSQL Datasource</description>
+	  <res-ref-name>jdbc/dsPhoneBook</res-ref-name>
+	  <res-type>javax.sql.DataSource</res-type>
+	  <res-auth>Container</res-auth>
+	</resource-ref>
+  
+</web-app>
